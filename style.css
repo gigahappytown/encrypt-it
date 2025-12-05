@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap");
+
+/* Base page */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.signupPage {
+  background-color: #d9d9d9;
+  font-family: "Inknut Antiqua", serif;
+  color: #000000;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Centered layout */
+
+.centerWrap {
+  width: 100%;
+  min-height: calc(100vh - 40px);
+  padding: 40px 16px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Title */
+
+.titleWrap {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.pageTitle {
+  font-size: 60px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 8px 0 0;
+}
+
+/* Card */
+
+.card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 680px;
+  padding: 28px 32px;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+/* Fieldsets */
+
+.fieldset {
+  width: 100%;
+  padding: 12px 16px 16px;
+  border-radius: 8px;
+  border: 1px solid #000000;
+  margin: 0 0 18px 0;
+}
+
+.legend {
+  padding: 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Textarea and select */
+
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #000000;
+  background: #3b3b3b;
+  color: #ffffff;
+  font-family: "Inknut Antiqua", serif;
+  font-size: 16px;
+  resize: vertical;
+}
+
+textarea::placeholder {
+  color: #cfcfcf;
+}
+
+.cipherRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 4px 0 12px;
+  font-size: 16px;
+}
+
+.select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #000000;
+  font-family: "Inknut Antiqua", serif;
+  font-size: 14px;
+  background: #ffffff;
+}
+
+/* Buttons */
+
+.buttonRow {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.button {
+  font-family: "Inknut Antiqua", serif;
+  font-size: 20px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #000000;
+  cursor: pointer;
+}
+
+.buttonFull {
+  width: 100%;
+}
+
+.signin_button {
+  background: #931621;
+  color: #ffffff;
+  border-color: #931621;
+}
+
+.signin_button:hover {
+  background: #ffffff;
+  color: #931621;
+}
+
+.secondaryButton {
+  background: #3b3b3b;
+  color: #ffffff;
+  border-color: #000000;
+}
+
+.secondaryButton:hover {
+  background: #ffffff;
+  color: #3b3b3b;
+}
+
+/* Result area */
+
+.resultArea {
+  margin-top: 12px;
+}
+
+.resultTitle {
+  font-size: 22px;
+  margin: 0 0 6px;
+}
+
+.resultText {
+  min-height: 24px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #000000;
+  background: #f3f3f3;
+}
