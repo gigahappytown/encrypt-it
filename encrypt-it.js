@@ -1,56 +1,66 @@
-(function() {
-  "use strict";
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Encrypt-It!</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-   // Sets up event handlers once the window has loaded.
+  <body class="signupPage">
+    <div class="centerWrap">
+      <div class="titleWrap">
+        <h1 class="pageTitle">Encrypt-It!</h1>
+        <h2 class="subtitle">
+          Translate any text message into a super-secret cipher!
+        </h2>
+      </div>
 
-  window.addEventListener("load", init);
+      <div class="card">
+        <fieldset class="fieldset">
+          <legend class="legend">Text to Encrypt</legend>
+          <textarea
+            id="input-text"
+            rows="10"
+            cols="60"
+            placeholder="Enter your message to be encrypted here"
+          ></textarea>
+        </fieldset>
 
-  function init() {
-    console.log("Window loaded!");
+        <fieldset class="fieldset">
+          <legend class="legend">Encrypt Options</legend>
 
-    const encryptButton = document.getElementById("encrypt-it");
-    encryptButton.addEventListener("click", handleEncryptClick);
+          <p class="cipherRow">
+            <strong>Cipher Type:</strong>
+            <select id="cipher-type" class="select">
+              <option value="shift">Shift Cipher</option>
+            </select>
+          </p>
 
-    const resetButton = document.getElementById("reset");
-    resetButton.addEventListener("click", handleReset);
-  }
+          <div class="buttonRow">
+            <button
+              id="encrypt-it"
+              class="button signin_button buttonFull"
+              type="button"
+            >
+              Encrypt It!
+            </button>
+            <button
+              id="reset"
+              class="button secondaryButton buttonFull"
+              type="button"
+            >
+              Reset
+            </button>
+          </div>
+        </fieldset>
 
-  function handleEncryptClick() {
-    const input = document.getElementById("input-text");
-    const resultPara = document.getElementById("result");
+        <div id="result-area" class="resultArea">
+          <h2 class="resultTitle">Result:</h2>
+          <p id="result" class="resultText"></p>
+        </div>
+      </div>
+    </div>
 
-    const plainText = input.value;
-    const cipherText = shiftCipher(plainText);
-
-    resultPara.textContent = cipherText;
-  }
-
-  function handleReset() {
-    const input = document.getElementById("input-text");
-    const resultPara = document.getElementById("result");
-
-    input.value = "";
-    resultPara.textContent = "";
-  }
-
-   // Returns an encrypted version of the given text, where
-   // each letter is shifted alphabetically ahead by 1 letter,
-   // and 'z' is shifted to 'a' (creating an alphabetical cycle).
-  function shiftCipher(text) {
-    text = text.toLowerCase();
-    let result = "";
-    for (let i = 0; i < text.length; i++) {
-      const ch = text[i];
-      if (ch < "a" || ch > "z") {
-        result += ch;
-      } else if (ch === "z") {
-        result += "a";
-      } else {
-        const code = text.charCodeAt(i);
-        const nextLetter = String.fromCharCode(code + 1);
-        result += nextLetter;
-      }
-    }
-    return result;
-  }
-})();
+    <script src="encrypt-it.js"></script>
+  </body>
+</html>
